@@ -10,6 +10,7 @@ class Auth extends Component {
         this.state = {
             is_admin: false,
             redirect: false,
+            is_register: false,
         }
     }
 
@@ -47,6 +48,9 @@ class Auth extends Component {
         else if (this.state.redirect) {
             return < Redirect to='/profile' />;
         }
+        if (this.state.is_register) {
+            return <Redirect to="/register" />
+        }
         return (
             <div className="header">
                 <h2>Welcome to Simfoni Supplier Dashboard</h2>
@@ -63,7 +67,7 @@ class Auth extends Component {
                     <br />
                     <button type="submit" onClick={() => { this.login() }}>Login</button>
                     <br />
-                    <small>Create an account? <a href="/register"> Register</a></small>
+                    <small>Create an account? <a href="" onClick={() => { this.setState({ is_register: true }) }}> Register</a></small>
                 </div >
             </div>
         )

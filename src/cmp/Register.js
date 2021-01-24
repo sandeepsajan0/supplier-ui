@@ -6,7 +6,8 @@ class Register extends Component {
     constructor() {
         super()
         this.state = {
-            redirect: false
+            redirect: false,
+            is_login: false,
         }
     }
 
@@ -44,6 +45,9 @@ class Register extends Component {
         if (this.state.redirect) {
             return <Redirect to="/auth" />;
         }
+        if (this.state.is_login) {
+            return <Redirect to="/" />
+        }
         return (
             <div className="header">
                 <h2>Welcome to Simfoni Supplier Dashboard</h2>
@@ -58,7 +62,7 @@ class Register extends Component {
 and minimum of 8 characters.</i></small> <br />
                         <input type="text" placeholder="Confirm Password" onChange={(e) => { this.setState({ c_password: e.target.value }) }} /> <br /><br />
                         <button onClick={() => this.register()}>Register</button> <br />
-                        <small>Already have an account? <a href="/"> Login</a></small>
+                        <small>Already have an account? <a href="" onClick={() => { this.setState({ is_login: true }) }}> Login</a></small>
                     </div>
                 </div>
             </div>
