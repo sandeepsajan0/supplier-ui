@@ -67,7 +67,7 @@ class Auth extends Component {
                     <br />
                     <button type="submit" onClick={() => { this.login() }}>Login</button>
                     <br />
-                    <small>Create an account? <a href="" onClick={() => { this.setState({ is_register: true }) }}> Register</a></small>
+                    <small>Create an account? <a onClick={() => { this.setState({ is_register: true }) }}> Register</a></small>
                 </div >
             </div>
         )
