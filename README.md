@@ -2,6 +2,38 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+  Flow of the Application:
+    
+   - Register as a supplier,
+    
+   - Login with the credentials email adn password,
+    
+   - Take a look at the profile, 
+    
+   - Edit Profie and save it, if you want to edit that, 
+    
+   - Logout
+    
+ These are the only feature we have fot supplier.
+ 
+ If you have admin credentials, login with that and see all the suppliers with their primary details
+ 
+ Used stack or packages:
+  
+   React js, react-router, css
+  
+ Other Functionalities:
+  
+  - Deployed on Github pages,
+  
+  - Continuous Integration and Deployment w.r.t master branch with Github actions.
+  
+Pending tasks/bugs:
+
+  - Couldn't write tests with limited time constrained,
+  
+  - Can not refresh the any url(bug). I think it is due to custom domain, I have already mapped with gh-pages.
+  
 ## Available Scripts
 
 In the project directory, you can run:
