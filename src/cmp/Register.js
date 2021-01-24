@@ -43,7 +43,7 @@ class Register extends Component {
 
     render() {
         if (this.state.redirect) {
-            return <Redirect to="/auth" />;
+            return <Redirect to="/" />;
         }
         if (this.state.is_login) {
             return <Redirect to="/" />

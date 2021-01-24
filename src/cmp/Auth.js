@@ -49,7 +49,7 @@ class Auth extends Component {
             return < Redirect to='/profile' />;
         }
         if (this.state.is_register) {
-            return <Redirect to="/register" />
+            return <Redirect to="/signup" />
         }
         return (
             <div className="header">

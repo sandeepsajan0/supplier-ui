@@ -29,7 +29,7 @@ function App() {
               <Route path="/admin" >
                 <ProtectedRoutes cmp={List} admin={1} />
               </Route>
-              <Route path="/register">
+              <Route path="/signup">
                 <Register />
               </Route>
               <Route path="/">
