@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './cmp/Profile';
+import List from './cmp/List';
+import Logout from './cmp/Logout';
+import Auth from './cmp/Auth';
+import Register from './cmp/Register';
+import ProtectedRoutes from './cmp/ProtectedRoutes';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="auth-wrapper">
+
+        <div>
+          <Router>
+            <Switch>
+              <Route path="/profile" exact>
+                <ProtectedRoutes cmp={Profile} />
+              </Route>
+              <Route path="/logout" >
+                <ProtectedRoutes cmp={Logout} logout={1} />
+              </Route>
+              <Route path="/admin" >
+                <ProtectedRoutes cmp={List} admin={1} />
+              </Route>
+              <Route path="/register">
+                <Register />
+              </Route>
+              <Route path="/">
+                <Auth />
+              </Route>
+            </Switch>
+          </Router>
+        </div >
+      </div>
     </div>
   );
 }
