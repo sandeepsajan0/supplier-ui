@@ -62,7 +62,7 @@ class Register extends Component {
 and minimum of 8 characters.</i></small> <br />
                         <input type="text" placeholder="Confirm Password" onChange={(e) => { this.setState({ c_password: e.target.value }) }} /> <br /><br />
                         <button onClick={() => this.register()}>Register</button> <br />
-                        <small>Already have an account? <a href="" onClick={() => { this.setState({ is_login: true }) }}> Login</a></small>
+                        <small>Already have an account? <a onClick={() => { this.setState({ is_login: true }) }}> Login</a></small>
                     </div>
                 </div>
             </div>
